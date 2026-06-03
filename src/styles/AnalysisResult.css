@@ -1,0 +1,331 @@
+.analysis-wrapper {
+  min-height: 100vh;
+  background: #070b16;
+  overflow: hidden;
+  position: relative;
+  padding: 50px 20px;
+}
+
+.analysis-container {
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+}
+
+.blob1 {
+  width: 300px;
+  height: 300px;
+  background: #2563eb;
+  top: 100px;
+  left: -100px;
+}
+
+.blob2 {
+  width: 350px;
+  height: 350px;
+  background: #9333ea;
+  bottom: 0;
+  right: -100px;
+}
+
+/* HERO */
+
+.hero-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 40px;
+  border-radius: 35px;
+  margin-bottom: 40px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+  0 0 40px rgba(255,255,255,0.04);
+
+  animation: fadeUp .8s ease;
+}
+
+.score-ring {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+
+  background:
+  radial-gradient(circle, #111827 45%, transparent 46%),
+  linear-gradient(135deg,#2563eb,#9333ea);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: white;
+
+  box-shadow:
+  0 0 50px rgba(59,130,246,.35);
+
+  transition: .4s;
+}
+
+.score-ring:hover {
+  transform: scale(1.05);
+}
+
+.score-ring h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.score-ring span {
+  color: #94a3b8;
+}
+
+.hero-content h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.role-badge {
+  display: inline-block;
+  background: linear-gradient(
+  135deg,#2563eb,#9333ea);
+
+  padding: 12px 24px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.hero-text {
+  color: #9ca3af;
+  max-width: 650px;
+}
+
+/* GRID */
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 30px;
+  padding: 30px;
+
+  backdrop-filter: blur(18px);
+
+  transition: .4s;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+}
+
+.glass-card h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.glass-card p,
+.glass-card li {
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-pill,
+.missing-pill {
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.skill-pill {
+  background: rgba(34,197,94,.15);
+  border: 1px solid #22c55e;
+  color: #22c55e;
+}
+
+.missing-pill {
+  background: rgba(239,68,68,.15);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:900px) {
+
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .score-ring {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (max-width: 768px) {
+
+  .analysis-wrapper {
+    padding: 30px 15px;
+  }
+
+  .hero-card {
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .glass-card {
+    padding: 25px;
+  }
+
+  .score-ring {
+    width: 180px;
+    height: 180px;
+  }
+
+  .score-ring h1 {
+    font-size: 3rem;
+  }
+}@media (max-width: 480px) {
+
+  .analysis-wrapper {
+    padding: 20px 10px;
+  }
+
+  .hero-card {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .role-badge {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .score-ring {
+    width: 150px;
+    height: 150px;
+  }
+
+  .score-ring h1 {
+    font-size: 2.5rem;
+  }
+
+  .glass-card {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .glass-card h3 {
+    font-size: 18px;
+  }
+
+  .glass-card p,
+  .glass-card li {
+    font-size: 14px;
+  }
+
+  .skill-pill,
+  .missing-pill {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .skills-container {
+    justify-content: center;
+  }
+}@media (max-width: 375px) {
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .score-ring {
+    width: 130px;
+    height: 130px;
+  }
+
+  .score-ring h1 {
+    font-size: 2rem;
+  }
+
+  .glass-card {
+    padding: 16px;
+  }
+
+  .skill-pill,
+  .missing-pill {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

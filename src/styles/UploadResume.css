@@ -1,0 +1,180 @@
+html,
+body,
+#root {
+  background: #050816;
+}
+
+/* PAGE */
+.upload-page {
+  min-height: 100vh;
+  background: #050816;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* CARD */
+.upload-card {
+  width: 100%;
+  max-width: 750px;
+
+  padding: 50px;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  text-align: center;
+}
+
+.upload-card h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.upload-card p {
+  color: #94a3b8;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* FILE BOX */
+.file-box {
+  margin-top: 35px;
+  padding: 40px;
+  border-radius: 20px;
+
+  border: 2px dashed rgba(255,255,255,0.15);
+
+  background: rgba(255,255,255,0.03);
+}
+
+.file-box input {
+  color: white;
+  width: 100%;
+}
+
+/* BUTTON */
+.upload-btn {
+  margin-top: 30px;
+  border: none;
+
+  padding: 16px 32px;
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #2563eb,
+    #7c3aed
+  );
+
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* MESSAGE */
+.upload-message {
+  margin-top: 25px;
+  color: #38bdf8 !important;
+  font-weight: 600;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .upload-card {
+    padding: 30px;
+  }
+
+  .upload-card h1 {
+    font-size: 38px;
+  }
+}@media (max-width: 768px) {
+
+  .upload-page {
+    padding: 20px;
+  }
+
+  .upload-card {
+    padding: 30px;
+  }
+
+  .upload-card h1 {
+    font-size: 38px;
+  }
+
+  .upload-card p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .file-box {
+    padding: 25px;
+  }
+
+  .upload-btn {
+    width: 100%;
+  }
+}@media (max-width: 480px) {
+
+  .upload-page {
+    padding: 15px;
+  }
+
+  .upload-card {
+    padding: 25px 20px;
+    border-radius: 22px;
+  }
+
+  .upload-card h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .upload-card p {
+    font-size: 15px;
+  }
+
+  .file-box {
+    padding: 20px 15px;
+  }
+
+  .file-box input {
+    font-size: 14px;
+  }
+
+  .upload-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+}@media (max-width: 375px) {
+
+  .upload-card {
+    padding: 20px 15px;
+  }
+
+  .upload-card h1 {
+    font-size: 26px;
+  }
+
+  .upload-card p {
+    font-size: 14px;
+  }
+
+  .file-box {
+    padding: 15px 10px;
+  }
+}

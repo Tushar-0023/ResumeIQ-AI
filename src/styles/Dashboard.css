@@ -1,0 +1,336 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #050816;
+}
+
+body {
+  background: #050816;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN */
+.dashboard {
+  min-height: 100vh;
+  background: #050816;
+  padding: 35px 50px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* NAV */
+.dash-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+}
+
+.logo span {
+  background: linear-gradient(
+    135deg,
+    #38bdf8,
+    #7c3aed
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LOGOUT */
+.logout-btn {
+  padding: 12px 22px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+
+  background: rgba(255,255,255,0.08);
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* HERO */
+.dash-hero {
+  margin-top: 50px;
+}
+
+.dash-hero h1 {
+  font-size: 56px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.dash-hero p {
+  color: #94a3b8;
+  font-size: 20px;
+}
+
+/* STATS */
+.stats-grid {
+  display: flex;
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 34px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03);
+
+  transition: 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h2 {
+  font-size: 46px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.stat-card p {
+  color: #cbd5e1;
+  font-size: 18px;
+}
+
+/* ACTION BOX */
+.action-box {
+  margin-top: 50px;
+  padding: 45px;
+  border-radius: 28px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(6,182,212,0.18),
+    rgba(124,58,237,0.18)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.action-box h2 {
+  font-size: 42px;
+  color: white;
+}
+
+.action-box p {
+  color: #dbeafe;
+  margin-top: 12px;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.primary-btn {
+  padding: 15px 28px;
+  border: none;
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #2563eb,
+    #7c3aed
+  );
+
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* QUICK LINKS */
+.quick-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.link-card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  color: white;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.10);
+}
+
+.link-card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+
+.link-card p {
+  color: #cbd5e1;
+}
+
+/* MOBILE */
+@media(max-width: 900px) {
+  .stats-grid,
+  .quick-links {
+    flex-direction: column;
+  }
+
+  .dashboard {
+    padding: 20px;
+  }
+
+  .dash-hero h1 {
+    font-size: 38px;
+  }
+
+  .action-box h2 {
+    font-size: 30px;
+  }
+}@media (max-width: 768px) {
+
+  .dash-nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .dash-hero {
+    text-align: center;
+  }
+
+  .dash-hero h1 {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+
+  .dash-hero p {
+    font-size: 16px;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-card h2 {
+    font-size: 38px;
+  }
+
+  .action-box {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .action-box h2 {
+    font-size: 28px;
+  }
+
+  .action-box p {
+    font-size: 16px;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+}@media (max-width: 480px) {
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+
+  .dash-hero h1 {
+    font-size: 30px;
+  }
+
+  .dash-hero p {
+    font-size: 15px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-card h2 {
+    font-size: 32px;
+  }
+
+  .stat-card p {
+    font-size: 15px;
+  }
+
+  .action-box {
+    padding: 25px 20px;
+  }
+
+  .action-box h2 {
+    font-size: 24px;
+  }
+
+  .link-card {
+    padding: 22px;
+    text-align: center;
+  }
+}@media (max-width: 375px) {
+
+  .dash-hero h1 {
+    font-size: 26px;
+  }
+
+  .action-box h2 {
+    font-size: 22px;
+  }
+
+  .stat-card h2 {
+    font-size: 28px;
+  }
+
+  .link-card {
+    padding: 18px;
+  }
+}
